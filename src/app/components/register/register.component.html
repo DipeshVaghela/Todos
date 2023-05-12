@@ -1,0 +1,57 @@
+<div class="register-section mt-5">
+  <div class="register-section-box p-3">
+
+    <!-- Header -->
+    <div class="register-section-header">
+      <h3 class="m-0 mb-2">Register</h3>
+    </div>
+
+    <!-- Body -->
+    <div class="register-form-section mt-3">
+
+      <form #registrationForm="ngForm" (ngSubmit)="registerUser(registrationForm)">
+
+        <div class="mb-3">
+          <label for="userName" class="form-label">Username<span class="required">*</span></label>
+          <input type="text" name="userName" class="form-control" id="userName" required minlength="8" maxlength="15"
+            ngModel #userName="ngModel" />
+          <span *ngIf="userName.touched && userName.invalid" class="input-error-text">Please enter valid
+            username.</span>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password<span class="required">*</span></label>
+          <input type="password" name="password" class="form-control" id="password" required minlength="8"
+            maxlength="50" ngModel #password="ngModel" />
+          <span *ngIf="password.touched && password.invalid" class="input-error-text">Please enter valid
+            password.</span>
+        </div>
+
+        <div class="mb-3">
+          <label for="firstName" class="form-label">First Name<span class="required">*</span></label>
+          <input type="text" name="firstName" class="form-control" id="firstName" required minlength="2" maxlength="30"
+            ngModel #firstName="ngModel" />
+          <span *ngIf="firstName.touched && firstName.invalid" class="input-error-text">Please enter valid first
+            name.</span>
+        </div>
+
+        <div class="mb-3">
+          <label for="lastName" class="form-label">Last Name<span class="required">*</span></label>
+          <input type="text" name="lastName" class="form-control" id="lastName" required minlength="2" maxlength="30"
+            ngModel #lastName="ngModel" />
+          <span *ngIf="lastName.touched && lastName.invalid" class="input-error-text">Please enter valid last
+            name.</span>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">
+            REGISTER
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</div>

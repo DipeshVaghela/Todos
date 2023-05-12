@@ -1,0 +1,21 @@
+.register-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-section-box {
+  min-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.register-section-header {
+  border-bottom: 1px solid #ddd;
+}
+
+.register-form-section .required,
+.input-error-text {
+  color: red;
+}
